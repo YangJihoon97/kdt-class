@@ -1,0 +1,57 @@
+<박스모델 css속성 (margin / padding)>
+ -모든 태그의 여백 초기화  =>  *{margin: 0; padding: 0;}
+
+ 1)margin => 위/오른쪽/아래/왼쪽의 박스 바깥 여백
+         -margin-top: 30px;
+         -margin-right: 50px;
+         -margin-bottom: 30px;
+         -margin-left: 50px;
+         -margin:30px 50px 40px 20px; (위/오른쪽/아래/왼쪽)
+         -margin:30px 50px 40px 0; (위/오른쪽/아래/왼쪽=0)
+         -margin:30px 50px 40px; (위/오른쪽/아래/왼쪽=50px)
+         -margin:30px 50px;  (위/오른쪽/아래=30px/왼쪽=50px)
+         -margin:30px;  (위/오른쪽/아래/왼쪽) 모두 30px
+
+     *더블마진 상하병합 => margin-bottom / margin-top => 큰값 하나만 처리
+     *더블마진 좌우합산 => margin-right / margin-left => 두 여백이 모두 합산
+
+ 2)padding => 위/오른쪽/아래/왼쪽의 박스 안쪽 여백
+      -마진과 안쪽 여백 주는 방법은 동일
+
+  ***padding + width + border => 모두 합산된다
+_________________________________________________________________________________________________
+<이미지 처리방법>
+
+1)<img>태그를 사용하는 방법
+   -태그의 속성
+        -src="이미지의 경로/파일명.확장자"
+        -alt="텍스트정보/링크정보"  (웹접근성 기본) => 생략하면 error
+2)css=> background-image:url() / background:url() 속성을 사용하는 방법 (배경)
+        -배경이미지는 padding의 영향을 안받는다
+        -background-image: url(./images/center.jpg);  (이미지경로)
+        -background-repeat:no-repeat;  (반복형태)
+        -background-position: 50px 100px/50% 50%;  (left/right/center/top/bottom)
+        -background-attachment: fixed (스크롤에 배경이미지 고정)
+        
+        
+        -background: url(./images/center.jpg) right bottom no-repeat;
+        -background: #f00 url(./images/center.jpg) right bottom no-repeat;
+        
+__________________________________________________________________________________________________
+<레이아웃>
+
+- block요소들은 기본 정렬방식이 수직/상하 정렬 방식을 취하고 있다.
+  이 block요소들의 정렬을 강제로 수평/좌우/ 정렬로 바꿀 수 있다.(강제단)
+- 강제단 만드는 방법 
+  1)float: left/right
+  - 문제점2 : float을 사용한 부모 요소에 문제가 생긴다(부모요소가 자식요소를 감싸지 못함)
+     - 해결방법 1) 부모태그에 overflow:hidden (최선책)
+                2) 부모태그에 float:left (차선책)
+  - 문제점2 : float을 사용하는/강제 단을 적용해야 하는 요소에 width값이(px/%)이 있을 때
+     - 해결방법 : 좌측단과 우측단에 위치하는 모든 요소에 float을 적용한다         
+  2)clear:both
+    -강제단의 공간을 사용하지 않는다(공간 해제/취소)
+  3)<div>/블럭요소 를 추가한다
+  - 무조건 1:1(1:1/다:1/1:다/다:다) 을 만들어라
+  - 만들지 않고도 가능하지만, 만드는 것이 더 안전하다
+
