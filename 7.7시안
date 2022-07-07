@@ -1,0 +1,31 @@
+다운받을것
+visual studio code
+
+폰트 (구글폰트에서 다운로드)
+-한글
+  -나눔고딕
+  -Noto Sans Kr
+-영어
+ -arial(기본)
+ -roboto
+ -Lato
+ -open sans
+ ___________________________________
+ <기업형>
+ -width:1200px(권장)~1400px(비권장)
+ -기본폰트(내용/글)->16px(권장)/14px
+ -글자색상->#333/#666/#999
+ -해상도->72 p/i
+ -비주얼 높이:960px~1000px
+ -기업형-index-초안1_양지훈.psd
+ 
+ -참고사이트(이미지/아이콘)
+image
+-https://www.pinterest.co.kr/
+-https://pixabay.com
+-www.unsplash.com
+icon
+-https://www.flaticon.com/
+_______________________________________________
+- 좌우 마진 작게 만들 것
+- 레이아웃 이미지공간 텍스트 먼저 구현 후 이미지
